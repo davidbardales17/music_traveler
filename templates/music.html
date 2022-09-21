@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Music Traveler{% endblock %}
+
+{% block content %}
+
+
+<body style="background-color:blueviolet ;">
+    <h1 style="color:aliceblue ; text-align: center;">Go back in time with Music Traveler!</h1>
+    <br>
+    <br>
+    <h1 style="color:aliceblue ; text-align:center">Which date do you want to travel back to? Enter year, month, day:</h1>
+    <!--Insert input question from the user to add YYYY-MM-DD in ond line-->
+    <br>
+    <br>
+    <form style="text-align:center ;" action="/music" method="post">
+        <input type="text" name="date" placeholder="YYYY-MM-DD">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <h1 style="color:aliceblue ; text-align:center">Top 100 songs on {{ date }}:</h1>
+    <br>
+    <br>
+    <div style="text-align:center">
+        <ul style="color:aliceblue ;">
+            {% for song in top_100_songs %}
+            <li style="size: 30px;">{{ song }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

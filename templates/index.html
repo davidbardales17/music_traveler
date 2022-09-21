@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Music Traveler{% endblock %}
+{% block content %}
+<body style="background-color:blueviolet ;">
+    <h1 style="color:aliceblue ; text-align: center;">Go back in time with Music Traveler!</h1>
+    <br>
+    <br>
+    <h1 style="color:aliceblue ; text-align:center">Which date do you want to travel back to? Enter year, month, day:</h1>
+    <!--input question from the user to add YYYY-MM-DD in ond line-->
+    <br>
+    <br>
+    <form style="text-align:center ;" action="/music" method="post">
+        <input type="text" name="date" placeholder="YYYY-MM-DD">
+        <input type="submit" value="Submit">
+    
+</body>
+{% endblock %}

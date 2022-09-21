@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<body style="background-color:blueviolet; color: aliceblue; ">
+    <h1 style="text-align: center;" ;>A Project made by David Bardales</h1>
+    <p>Travel back in time with Music Traveler. Enter a date and see what music was popular on that day. Relive the music of your favorite artists and discover new music from the past. </p>
+    <div>
+        <!--Add image calles about_image-->
+        <img src="{{ url_for('static', filename='about_image.jpg') }}" alt="about_image" 
+        style=" border-radius: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:50%;
+        height: 50%;">   
+    </div>
+</body>
+{% endblock %}
